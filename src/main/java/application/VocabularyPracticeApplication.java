@@ -41,6 +41,14 @@ public class VocabularyPracticeApplication extends Application {
         menu.getChildren().addAll(enterButton, practiceButton);
         layout.setTop(menu);
 
+        // add button functionality
+        enterButton.setOnMouseClicked((event) -> {
+            layout.setCenter(inputView.getView());
+        });
+        practiceButton.setOnMouseClicked((event) -> {
+            layout.setCenter(practiceView.getView());
+        });
+
         layout.setCenter(inputView.getView());
 
         Scene view = new Scene(layout, 400, 300);
