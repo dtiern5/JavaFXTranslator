@@ -1,5 +1,7 @@
 package application;
 
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -17,6 +19,11 @@ public class InputView {
     public Parent getView() {
 
         GridPane layout = new GridPane();
+
+        layout.setAlignment(Pos.CENTER);
+        layout.setVgap(10);
+        layout.setHgap(10);
+        layout.setPadding(new Insets(10, 10, 10, 10));
 
         Label wordInstruction = new Label("Word");
         TextField wordField = new TextField();
