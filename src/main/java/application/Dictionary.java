@@ -10,6 +10,7 @@ public class Dictionary {
     public Dictionary() {
         this.dictionary = new HashMap<>();
         this.words = new ArrayList<>();
+        add("hola", "hello");
     }
 
     public String get(String word) {
@@ -25,7 +26,7 @@ public class Dictionary {
 
     public String getRandomWord() {
         Random random = new Random();
-        return words.get(random.nextInt(words.size()));
+        return this.words.get(random.nextInt(this.words.size()));
     }
 
 
