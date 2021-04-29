@@ -30,6 +30,21 @@ public class PracticeView {
         layout.add(checkButton,0, 2);
         layout.add(feedback, 0, 3);
 
+        checkButton.setOnMouseClicked((event) -> {
+            String translation = translationInput.getText();
+            if (translation.equals(dictionary.get(word))) {
+                feedback.setText("Correct");
+            }
+            else {
+                feedback.setText("Incorrect, the correct translation for " + word + " is " + dictionary.get(word));
+            }
+
+            word = dictionary.getRandomWord();
+            wordInstruction.setText("Translate the word " + word);
+            translationInput.clear();
+
+        });
+
         return layout;
     }
 
