@@ -24,12 +24,21 @@ public class InputView {
         TextField translationField = new TextField();
         Button button = new Button("Add the word pair");
 
-
         layout.add(wordInstruction, 0, 0);
         layout.add(wordField, 0, 1);
         layout.add(translationInstruction, 0, 2);
         layout.add(translationField, 0, 3);
         layout.add(button, 0, 4);
+
+        button.setOnMouseClicked((event) -> {
+            String word = wordField.getText();
+            String translation = translationField.getText();
+
+            dictionary.add(word, translation);
+
+            wordField.clear();
+            translationField.clear();
+        });
 
         return layout;
 
