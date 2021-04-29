@@ -3,6 +3,7 @@ package application;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -30,6 +31,8 @@ public class VocabularyPracticeApplication extends Application {
         // create menu
         HBox menu = new HBox();
 
+        menu.setAlignment(Pos.CENTER);
+
         menu.setPadding(new Insets(10, 10, 10, 10));
         menu.setSpacing(10);
 
@@ -51,7 +54,7 @@ public class VocabularyPracticeApplication extends Application {
 
         layout.setCenter(inputView.getView());
 
-        Scene view = new Scene(layout, 400, 300);
+        Scene view = new Scene(layout, 300, 250);
         stage.setScene(view);
         stage.show();
 
