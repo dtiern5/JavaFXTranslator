@@ -1,9 +1,6 @@
 package application;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Dictionary {
     private Map<String, String> dictionary;
@@ -16,6 +13,18 @@ public class Dictionary {
 
     public String get(String word) {
         return this.dictionary.get(word);
+    }
+
+    public void add(String word, String translation) {
+        if (!this.dictionary.containsKey(word)) {
+            words.add(word);
+        }
+        dictionary.put(word, translation);
+    }
+
+    public String getRandomWord() {
+        Random random = new Random();
+        return words.get(random.nextInt(words.size()));
     }
 
 
