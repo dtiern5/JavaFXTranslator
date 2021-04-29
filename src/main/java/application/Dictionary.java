@@ -3,6 +3,7 @@ package application;
 import java.util.*;
 
 public class Dictionary {
+
     private Map<String, String> dictionary;
     private List<String> words;
 
